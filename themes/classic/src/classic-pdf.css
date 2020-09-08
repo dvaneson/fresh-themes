@@ -10,12 +10,11 @@
 body {
     font-size: 10pt;
     color: #333;
-    line-height: 1.42857143;
+    /* line-height: 1.42857143; */
     background-color: #ffffff;
     margin: 0;
     padding: 0;
-    columns: 3 auto;
-    column-rule: thin solid black;
+    display: flex;
     height: 100%;
     font-family: {{{fontList 'default'}}};
 }
@@ -30,10 +29,11 @@ html {
     font-family: Fira Sans;
     font-size: 11pt;
     font-weight: 300;
-    line-height: 1.5;
+    /* line-height: 1.5; */
+    height: 100%;
 }
 html body h1 {
-    color: #fbc847;
+    color: #ffffff;
     font-size: 24pt;
     margin: 0;
 }
@@ -44,9 +44,7 @@ html body h4 {
     font-weight: 400;
 }
 html body h2 {
-    /* break-before: always; */
     font-size: 28pt;
-    /* string-set: heading content(); */
 }
 html body h3 {
     font-weight: 300;
@@ -56,10 +54,28 @@ html body h4 {
     font-size: 13pt;
 }
 html body .container {
-    display: inline-block;
-    width: 100%;
+    /* display: inline-block; */
+    float: left;
+    width: auto;
     height: 100%;
-    padding: 5px;
+}
+html body .left {
+  width: 35%;
+  color: #ffffff;
+  background-color: {{{color 'primary'}}};
+}
+html body .left a {
+  color: {{{color 'secondary'}}};
+}
+html body .center a {
+  color: {{{color 'primary'}}};
+}
+html body .right {
+  width: 30%;
+  border-left: 5px #393939;
+}
+html body .container > section {
+  padding: 15px;
 }
 /* html body article#offers section {
     width: 33%;

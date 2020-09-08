@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container left">
         <section>
             <h1>{{{ r.name }}}</h1>
             <ul id="contact">
@@ -35,17 +35,14 @@
             {{/has}}
         </section>
     </div>
-    {{!-- <section>
-        <h3>Experience</h3>
-    </section> --}}
 
-    <div class="container">
+    <div class="container center">
         {{> section/employment }}
 
         {{> section/education }}
     </div>
 
-    <div class="container">
+    <div class="container right">
         {{> section/skills }}
 
         {{> section/interests }}

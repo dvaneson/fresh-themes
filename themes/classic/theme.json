@@ -1,27 +1,38 @@
 {
-  "title": "classic",
-  "description": "A theme partially built from modern.",
-  "author": "dvaneson <dvaneson@gmail.com> (https://github.com/dvaneson)",
-  "engine": "handlebars",
-  "palette": {
-    "skillLevels": [ "#FFFFFF", "#5CB85C", "#F1C40F", "#428BCA", "#C00000" ]
-  },
-  "inherits": {
-    "txt": "basis",
-    "md": "basis"
-  },
-  "message": "This theme builds on the modern theme to use multiple columns and make the text smaller, in order to fit everything on one page.",
-  "fonts": {
-    "all": {
-      "default": [ "Open Sans", "Helvetica Neue", "Helvetica", "Segoe UI", "Calibri", "sans-serif" ],
-      "heading1": ["Arial"],
-      "heading2": ["Arial"]
+    "title": "classic",
+    "description": "A theme partially built from modern.",
+    "author": "dvaneson <dvaneson@gmail.com> (https://github.com/dvaneson)",
+    "engine": "handlebars",
+    "palette": {
+        "skillLevels": ["#FFFFFF", "#5CB85C", "#F1C40F", "#428BCA", "#C00000"]
     },
-    "doc": {
-      "default": "Calibri",
-      "heading1": "Trebuchet MS",
-      "heading2": "Calibri",
-      "heading3": "Calibri"
+    "colors": {
+        "primary": "#2F93D2",
+        "secondary": "#FBCB47"
+    },
+    "inherits": {
+        "txt": "basis",
+        "md": "basis"
+    },
+    "message": "This theme builds on the modern theme to use multiple columns and make the text smaller, in order to fit everything on one page.",
+    "fonts": {
+        "all": {
+            "default": [
+                "Open Sans",
+                "Helvetica Neue",
+                "Helvetica",
+                "Segoe UI",
+                "Calibri",
+                "sans-serif"
+            ],
+            "heading1": ["Arial"],
+            "heading2": ["Arial"]
+        },
+        "doc": {
+            "default": "Calibri",
+            "heading1": "Trebuchet MS",
+            "heading2": "Calibri",
+            "heading3": "Calibri"
+        }
     }
-  }
 }
