@@ -3,96 +3,86 @@
     margin: 0;
 }
 
-/* * {
-    box-sizing: border-box;
-} */
+hr {
+  color: {{{color 'outline'}}};
+}
 
 body {
-    font-size: 10pt;
-    color: #333;
-    /* line-height: 1.42857143; */
+    font-size: 8pt;
+    color: black;
     background-color: #ffffff;
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-    height: 100%;
     font-family: {{{fontList 'default'}}};
 }
 
-/* Typical page borders are awkward when rendered to PDF. */
-body.pdf {
-    background-color: #ffffff;
-}
-
 html {
-    color: #393939;
+    color: rgb(31, 31, 31);
     font-family: Fira Sans;
     font-size: 11pt;
     font-weight: 300;
-    /* line-height: 1.5; */
     height: 100%;
 }
-html body h1 {
-    color: #ffffff;
-    font-size: 24pt;
-    margin: 0;
+
+h2 {    
+    position: relative;
+    display: block;
+    color: {{{color 'accent'}}};
+    font-size: 16pt;
+    text-transform: uppercase;
 }
-html body h2,
-html body h3,
-html body h4 {
-    color: black;
-    font-weight: 400;
-}
-html body h2 {
-    font-size: 28pt;
-}
-html body h3 {
+h3 {
+    color: {{{color 'secondary'}}};
     font-weight: 300;
-    font-size: 15pt;
+    font-size: 14pt;
 }
-html body h4 {
+h4 {
+    color: black;
     font-size: 13pt;
 }
-html body .container {
-    /* display: inline-block; */
+
+.container {
     float: left;
     width: auto;
     height: 100%;
 }
-html body .left {
-  width: 35%;
+.container section {
+  padding: 15px;
+  border-top-style: none;
+}
+
+.left {
+  width: 30%;
   color: #ffffff;
   background-color: {{{color 'primary'}}};
 }
-html body .left a {
+.name {
+  font-size: 20pt;
+}
+.left h2 {
+  color: #ffffff;
+  text-align: center;
+}
+.left a {
   color: {{{color 'secondary'}}};
 }
-html body .center a {
+.email, .website, .phone {
+  font-size: 11pt;
+}
+[class^="icon-"] {
+  padding-right: 5px;
+}
+section #summary {
+  margin-top: -1rem;
+}
+
+.center a {
   color: {{{color 'primary'}}};
 }
-html body .right {
+
+.container.right {
   width: 30%;
-  border-left: 5px #393939;
+  border-left: 1px solid {{{color 'outline'}}};
 }
-html body .container > section {
-  padding: 15px;
-}
-/* html body article#offers section {
-    width: 33%;
-    margin: 0;
-    border: 2px solid green;
-} */
-/* html body article#offers section {
-  position: absolute;
-  width: 100%;
-  overflow-wrap: normal;
-} */
-/* html body article#offers section p {
-    background: #fbc847;
-    display: block;
-    font-size: 15pt;
-    font-weight: 700;
-    margin-bottom: 0;
-    padding: 0.25cm 0;
-    text-align: center;
-} */

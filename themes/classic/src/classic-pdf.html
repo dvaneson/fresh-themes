@@ -4,67 +4,71 @@
 <head>
     <meta charset="utf-8" />
     <title>{{ RAW.name }}</title>
+    <link
+        href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic'
+        rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+        type='text/css'>
+    <link rel="stylesheet" href="https://dvaneson.com/assets/icomoon/style.css">
     {{{ styleSheet "classic-pdf.css" }}}
+    {{{ styleSheet "avatar.scss" }}}
 </head>
 
 <body>
     <div class="container left">
-        <section>
-            <h1>{{{ r.name }}}</h1>
-            <ul id="contact">
-                {{#has 'contact.email'}}
-                <li class="email">
-                    <a href="mailto:{{{ RAW.contact.email }}}">{{ RAW.contact.email }}</a>
-                </li>
-                {{/has}}
 
-                {{#has 'contact.phone'}}
-                <li class="phone">{{ RAW.contact.phone }}</li>
+        <h2 class="name">{{{ r.name }}}</h2>
+
+        {{#has 'info.image'}}
+        <section>
+            <img src={{ RAW.info.image }} class="avatar" alt="{{ r.name }}" width="120" height="120" loading="lazy" />
+        </section>
+        {{/has}}
+
+        <section>
+            <div id="contact">
+                {{#has 'contact.email'}}
+                <div class="email">
+                    <span class="icon-envelop"></span>
+                    <a href="mailto:{{{ RAW.contact.email }}}">{{ RAW.contact.email }}</a>
+                </div>
                 {{/has}}
 
                 {{#has 'contact.website'}}
-                <li class="website">
+                <div class="website">
+                    <span class="icon-link"></span>
                     <a href="{{{ RAW.contact.website }}}">
-                        {{trimURL RAW.contact.website }}
+                        {{ RAW.contact.website }}
                     </a>
-                </li>
+                </div>
                 {{/has}}
-            </ul>
-            {{#has "info.brief"}}
-            <p id="summary">{{{ r.info.brief }}}</p>
-            {{/has}}
+
+                {{#has 'contact.phone'}}
+                <div class="phone">
+                    <span class="icon-phone"></span> {{ RAW.contact.phone }}
+                </div>
+                {{/has}}
+            </div>
         </section>
+
+        {{> info }}
     </div>
 
     <div class="container center">
-        {{> section/employment }}
+        {{#*inline "icon-employment"}}<span class="fa fa-lg fa-building"></span>{{/inline}}
+        {{> employment _icon="icon-employment" }}
 
-        {{> section/education }}
+        {{#*inline "icon-education"}}<span class="fa fa-lg fa-mortar-board"></span>{{/inline}}
+        {{> education _icon="icon-education" }}
     </div>
 
     <div class="container right">
-        {{> section/skills }}
+        {{#*inline "icon-skills"}}<span class="fa fa-lg fa-code"></span>{{/inline}}
+        {{> skills _icon="icon-skills" }}
 
-        {{> section/interests }}
+        {{#*inline "icon-interests"}}<span class="fa fa-lg fa-bicycle"></span>{{/inline}}
+        {{> interests _icon="icon-interests" }}
     </div>
-    <!--
-            {{> section/skills }}
-            {{> section/employment }}
-            {{> section/projects }}
-            {{> section/governance }}
-            {{> section/education }}
-            {{> section/affiliation }}
-            {{> section/service }}
-            {{> section/extracurricular }}
-            {{> section/samples }}
-            {{> section/writing }}
-            {{> section/reading }}
-            {{> section/recognition }}
-            {{> section/speaking }}
-            {{> section/references }}
-            {{> section/interests }}
-            -->
-    </article>
 </body>
 
 </html>

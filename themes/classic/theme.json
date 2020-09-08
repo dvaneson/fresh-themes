@@ -8,7 +8,9 @@
     },
     "colors": {
         "primary": "#2F93D2",
-        "secondary": "#FBCB47"
+        "secondary": "#ffbf00",
+        "accent": "#206794",
+        "outline": "#23272a"
     },
     "inherits": {
         "txt": "basis",
