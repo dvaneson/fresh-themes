@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{ RAW.name }}</title>
+    {{{ styleSheet "classic-pdf.css" }}}
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <h1>{{{ r.name }}}</h1>
+            <ul id="contact">
+                {{#has 'contact.email'}}
+                <li class="email">
+                    <a href="mailto:{{{ RAW.contact.email }}}">{{ RAW.contact.email }}</a>
+                </li>
+                {{/has}}
+
+                {{#has 'contact.phone'}}
+                <li class="phone">{{ RAW.contact.phone }}</li>
+                {{/has}}
+
+                {{#has 'contact.website'}}
+                <li class="website">
+                    <a href="{{{ RAW.contact.website }}}">
+                        {{trimURL RAW.contact.website }}
+                    </a>
+                </li>
+                {{/has}}
+            </ul>
+            {{#has "info.brief"}}
+            <p id="summary">{{{ r.info.brief }}}</p>
+            {{/has}}
+        </section>
+    </div>
+    {{!-- <section>
+        <h3>Experience</h3>
+    </section> --}}
+
+    <div class="container">
+        {{> section/employment }}
+
+        {{> section/education }}
+    </div>
+
+    <div class="container">
+        {{> section/skills }}
+
+        {{> section/interests }}
+    </div>
+    <!--
+            {{> section/skills }}
+            {{> section/employment }}
+            {{> section/projects }}
+            {{> section/governance }}
+            {{> section/education }}
+            {{> section/affiliation }}
+            {{> section/service }}
+            {{> section/extracurricular }}
+            {{> section/samples }}
+            {{> section/writing }}
+            {{> section/reading }}
+            {{> section/recognition }}
+            {{> section/speaking }}
+            {{> section/references }}
+            {{> section/interests }}
+            -->
+    </article>
+</body>
+
+</html>
