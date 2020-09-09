@@ -7,10 +7,12 @@
         "skillLevels": ["#FFFFFF", "#5CB85C", "#F1C40F", "#428BCA", "#C00000"]
     },
     "colors": {
-        "primary": "#2F93D2",
-        "secondary": "#ffbf00",
-        "accent": "#206794",
-        "outline": "#23272a"
+        "primary": "#7289da",
+        "accent": "#3b5998",
+        "links": "#ffbf00",
+        "outline": "#99aab5",
+        "text": "#23272a",
+        "background": "#ffffff"
     },
     "inherits": {
         "txt": "basis",

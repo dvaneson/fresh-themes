@@ -8,9 +8,9 @@ hr {
 }
 
 body {
-    font-size: 8pt;
-    color: black;
-    background-color: #ffffff;
+    font-size: 10pt;
+    color: {{{color 'text'}}};
+    background-color: {{{color 'background'}}};
     height: 100%;
     margin: 0;
     padding: 0;
@@ -32,12 +32,12 @@ h2 {
     text-transform: uppercase;
 }
 h3 {
-    color: {{{color 'secondary'}}};
+    color: {{{color 'primary'}}};
     font-weight: 300;
     font-size: 14pt;
 }
 h4 {
-    color: black;
+    color: {{{color 'text'}}};
     font-size: 13pt;
 }
 
@@ -48,23 +48,27 @@ h4 {
 }
 .container section {
   padding: 15px;
-  border-top-style: none;
 }
 
 .left {
-  width: 30%;
-  color: #ffffff;
+  width: 25%;
+  color: {{{color 'background'}}};
   background-color: {{{color 'primary'}}};
 }
 .left h2 {
-  color: #ffffff;
+  color: {{{color 'background'}}};
   text-align: center;
 }
 .left h2.name {
   font-size: 20pt;
 }
+.left #image {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+}
 .left a {
-  color: {{{color 'secondary'}}};
+  color: {{{color 'links'}}};
 }
 .email, .website, .phone {
   font-size: 11pt;
@@ -76,11 +80,17 @@ section #summary {
   margin-top: -1rem;
 }
 
+.center {
+  width: 50%
+}
 .center a {
   color: {{{color 'primary'}}};
 }
+span.tenure {
+  margin-top: -1rem;
+}
 
-.container.right {
-  width: 30%;
-  border-left: 1px solid {{{color 'outline'}}};
+.right {
+  width: 25%;
+  border-left: 2px solid {{{color 'outline'}}};
 }
