@@ -20,8 +20,8 @@
         <h2 class="name">{{{ r.name }}}</h2>
 
         {{#has 'info.image'}}
-        <section>
-            <img src={{ RAW.info.image }} class="avatar" alt="{{ r.name }}" width="120" height="120" loading="lazy" />
+        <section id="image">
+            <img src={{ RAW.info.image }} class="avatar" alt="{{ r.name }}" loading="lazy" />
         </section>
         {{/has}}
 
@@ -58,8 +58,8 @@
         {{#*inline "icon-employment"}}<span class="fa fa-lg fa-building"></span>{{/inline}}
         {{> employment _icon="icon-employment" }}
 
-        {{#*inline "icon-education"}}<span class="fa fa-lg fa-mortar-board"></span>{{/inline}}
-        {{> education _icon="icon-education" }}
+        <!-- {{#*inline "icon-education"}}<span class="fa fa-lg fa-mortar-board"></span>{{/inline}}
+        {{> education _icon="icon-education" }} -->
     </div>
 
     <div class="container right">
