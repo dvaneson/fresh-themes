@@ -27,8 +27,6 @@ html {
 }
 
 h2 {    
-    position: relative;
-    display: block;
     color: {{{color 'accent'}}};
     font-size: 16pt;
     text-transform: uppercase;
@@ -58,12 +56,12 @@ h4 {
   color: #ffffff;
   background-color: {{{color 'primary'}}};
 }
-.name {
-  font-size: 20pt;
-}
 .left h2 {
   color: #ffffff;
   text-align: center;
+}
+.left h2.name {
+  font-size: 20pt;
 }
 .left a {
   color: {{{color 'secondary'}}};
