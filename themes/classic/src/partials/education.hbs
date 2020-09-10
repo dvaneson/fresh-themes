@@ -1,14 +1,22 @@
 {{#section "education"}}
-<hr>
 <section id="education">
   {{#> header-education }}
   {{> header-icon _title="EDUCATION" _section="education" _hdricon=(lookup . '_icon') }}
   {{/header-education}}
   {{#each r.education.history}}
   {{#> body-education }}
-  <div>
-    <h3>{{#if title}}<em>{{{ title }}}</em>, {{/if}}{{{ institution }}}</h3>
-    <span class="tenure">{{dateRange .}}</span>
+  <div id="education-div">
+    <div class="inline">
+      <h3><b>{{{ institution }}}</b></h3>
+      <span class="tenure">{{dateRange . 'MMM YYYY'}}</span>
+    </div>
+
+    {{#if title}}
+    <h3 style="width: 50%">
+      <em>{{{ title }}}</em>
+    </h3>
+    {{/if}} 
+    
     {{#if location}}<span class="location">{{location}}</span>{{/if}}
     {{{ summary }}}
     {{> highlights }}

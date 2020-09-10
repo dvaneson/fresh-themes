@@ -3,19 +3,22 @@
     margin: 0;
 }
 
+html, body, main, section, header, ul, p, h1, h2, h3, h4 {
+  font-size: 10pt;
+  margin: 0; padding: 0;
+  font-family: {{{fontList 'default'}}};
+}
+
 hr {
   color: {{{color 'outline'}}};
 }
 
 body {
-    font-size: 10pt;
+    height: 100%;
+    display: flex;
+    font-family: {{{fontList 'heading1'}}};
     color: {{{color 'text'}}};
     background-color: {{{color 'background'}}};
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    font-family: {{{fontList 'default'}}};
 }
 
 html {
@@ -28,17 +31,17 @@ html {
 
 h2 {    
     color: {{{color 'accent'}}};
-    font-size: 16pt;
+    font-size: 12pt;
     text-transform: uppercase;
 }
 h3 {
     color: {{{color 'primary'}}};
     font-weight: 300;
-    font-size: 14pt;
+    font-size: 10pt;
 }
 h4 {
     color: {{{color 'text'}}};
-    font-size: 13pt;
+    font-size: 10pt;
 }
 
 .container {
@@ -47,7 +50,7 @@ h4 {
     height: 100%;
 }
 .container section {
-  padding: 15px;
+  padding: 10px;
 }
 
 .left {
@@ -55,17 +58,12 @@ h4 {
   color: {{{color 'background'}}};
   background-color: {{{color 'primary'}}};
 }
-.left h2 {
+.left h1, .left h2 {
   color: {{{color 'background'}}};
   text-align: center;
 }
-.left h2.name {
-  font-size: 20pt;
-}
-.left #image {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: center;
+.left h1.name {
+  font-size: 24pt;
 }
 .left a {
   color: {{{color 'links'}}};
@@ -75,8 +73,9 @@ h4 {
 }
 [class^="icon-"] {
   padding-right: 5px;
+  color: {{{color 'background'}}};
 }
-section #summary {
+#summary {
   margin-top: -1rem;
 }
 
@@ -86,11 +85,25 @@ section #summary {
 .center a {
   color: {{{color 'primary'}}};
 }
-span.tenure {
-  margin-top: -1rem;
-}
 
 .right {
   width: 25%;
   border-left: 2px solid {{{color 'outline'}}};
+}
+
+.inline {
+  display: inline-flex;
+}
+.inline h3 {
+  margin-right: auto;
+}
+span.tenure {
+  float: right;
+  font-size: 8pt;
+  font-weight: bold;
+  color: {{{color 'text'}}};
+}
+
+#education-div, #employment-div {
+  margin-top: 0.25rem;
 }

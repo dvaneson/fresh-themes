@@ -3,4 +3,5 @@ assets/
 out/
 rez.json
 options.json
+resume.json
 package-lock.json

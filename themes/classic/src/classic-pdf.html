@@ -17,7 +17,7 @@
 <body>
     <div class="container left">
 
-        <h2 class="name">{{{ r.name }}}</h2>
+        <h1 class="name">{{{ r.name }}}</h1>
 
         {{#has 'info.image'}}
         <section id="image">
@@ -55,14 +55,17 @@
     </div>
 
     <div class="container center">
+        {{#*inline "icon-education"}}<span class="fa fa-lg fa-mortar-board"></span>{{/inline}}
+        {{> education _icon="icon-education" }}
+
         {{#*inline "icon-employment"}}<span class="fa fa-lg fa-building"></span>{{/inline}}
         {{> employment _icon="icon-employment" }}
-
-        <!-- {{#*inline "icon-education"}}<span class="fa fa-lg fa-mortar-board"></span>{{/inline}}
-        {{> education _icon="icon-education" }} -->
     </div>
 
     <div class="container right">
+        {{#*inline "icon-writing"}}<span class="fa fa-lg fa-pencil"></span>{{/inline}}
+        {{> writing _icon="icon-writing"}}
+
         {{#*inline "icon-skills"}}<span class="fa fa-lg fa-code"></span>{{/inline}}
         {{> skills _icon="icon-skills" }}
 

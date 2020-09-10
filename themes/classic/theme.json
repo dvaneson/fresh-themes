@@ -7,36 +7,30 @@
         "skillLevels": ["#FFFFFF", "#5CB85C", "#F1C40F", "#428BCA", "#C00000"]
     },
     "colors": {
-        "primary": "#7289da",
-        "accent": "#3b5998",
-        "links": "#ffbf00",
+        "primary": "#6497b1",
+        "accent": "#03396c",
+        "links": "#011f4b",
         "outline": "#99aab5",
         "text": "#23272a",
-        "background": "#ffffff"
+        "background": "#f9f9f9"
     },
     "inherits": {
         "txt": "basis",
         "md": "basis"
     },
     "message": "This theme builds on the modern theme to use multiple columns and make the text smaller, in order to fit everything on one page.",
-    "fonts": {
-        "all": {
-            "default": [
-                "Open Sans",
-                "Helvetica Neue",
-                "Helvetica",
-                "Segoe UI",
-                "Calibri",
-                "sans-serif"
-            ],
-            "heading1": ["Arial"],
-            "heading2": ["Arial"]
-        },
-        "doc": {
-            "default": "Calibri",
-            "heading1": "Trebuchet MS",
-            "heading2": "Calibri",
-            "heading3": "Calibri"
-        }
+  "fonts": {
+    "all": {
+      "default": [ "Open Sans", "sans-serif" ],
+      "heading1": [ "Open Sans", "Helvetica Neue", "Helvetica", "Lato", "sans-serif" ],
+      "heading2": [ "Helvetica Neue", "Helvetica", "Lato", "sans-serif" ]
+    },
+    "doc": {
+      "title": "Open Sans Light",
+      "heading1": "Open Sans Light",
+      "heading2": "Open Sans Light",
+      "heading3": "Open Sans Light",
+      "default": "Calibri"
     }
+  }
 }

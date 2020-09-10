@@ -1,20 +1,27 @@
 {{#section "employment"}}
+<hr>
 <section id="employment">
   {{#> header-employment }}
   {{> header-icon _title="EMPLOYMENT" _section="employment" _hdricon=(lookup . '_icon') }}
   {{/header-employment}}
   {{#each r.employment.history}}
   {{#> body-employment }}
-  <div>
+  <div id="employment-div">
+    <div class="inline">
+      <h3><b>{{ position }}</b></h3>
+      <span class="tenure">{{dateRange . 'MMM YYYY'}}</span>
+    </div>
     <h3>
-      <b>{{ position }}</b>, {{#if url }} <a href="{{{ url }}}">{{ employer }}</a>
+      {{#if url }} <a href="{{{ url }}}">{{ employer }}</a>
       {{else}}
-      {{ employer }}
+      <em>{{ employer }}</em>
       {{/if}}
     </h3>
-    <span class="tenure">{{dateRange .}}</span>
-    {{#if location}}<span class="location">{{location}}</span>{{/if}}
-    <p>{{{ summary }}}</p>
+    
+    {{#if location}}
+      <span class="location">{{location}}</span>
+    {{/if}}
+    {{!-- <p>{{{ summary }}}</p> --}}
     {{> highlights }}
     {{#if keywords}}<span class="keywords">{{#each keywords}}{{{ . }}} {{/each}}</span>{{/if}}
   </div>
