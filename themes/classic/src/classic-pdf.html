@@ -66,11 +66,11 @@
         {{> info }}
     </div>
 
-    {{#*inline "icon-writing"}}<span class="icon-book"></span>{{/inline}}
-    {{#*inline "icon-employment"}}<span class="icon-briefcase"></span>{{/inline}}
-    {{#*inline "icon-education"}}<span class="fa fa-mortar-board"></span>{{/inline}}
-    {{#*inline "icon-skills"}}<span class="fa fa-code"></span>{{/inline}}
-    {{#*inline "icon-interests"}}<span class="fa icon-heart"></span>{{/inline}}
+    {{#*inline "icon-writing"}} {{{ getIcon 'writing' }}} {{/inline}}
+    {{#*inline "icon-employment"}} {{{ getIcon 'employment' }}} {{/inline}}
+    {{#*inline "icon-education"}} {{{ getIcon 'education' }}} </span>{{/inline}}
+    {{#*inline "icon-skills"}} {{{ getIcon 'skills' }}} {{/inline}}
+    {{#*inline "icon-interests"}} {{{ getIcon 'interests' }}} {{/inline}}
 
     <div class="container center">
         {{> education _icon="icon-education" }}

@@ -44,6 +44,11 @@
         "website": "icon-home3",
         "phone": "icon-phone",
         "linkedin": "icon-linkedin2",
-        "github": "icon-github"
+        "github": "icon-github",
+        "writing": "icon-book",
+        "employment": "icon-briefcase",
+        "education": "fa fa-mortar-board",
+        "skills": "fa fa-code",
+        "interests": "fa icon-heart"
     }
 }
