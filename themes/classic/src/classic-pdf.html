@@ -28,14 +28,14 @@
             <div id="contact">
                 {{#has 'contact.email'}}
                 <div>
-                    <span class="icon-envelop"></span>
+                    {{{ getIcon 'email' }}}
                     <a href="mailto:{{{ r.contact.email }}}">{{ r.contact.email }}</a>
                 </div>
                 {{/has}}
 
                 {{#has 'contact.website'}}
                 <div>
-                    <span class="icon-home3"></span>
+                    {{{ getIcon 'website'}}}
                     <a href="{{{ RAW.contact.website }}}">
                         {{ trimURL RAW.contact.website }}
                     </a>
@@ -44,13 +44,15 @@
 
                 {{#has 'contact.phone'}}
                 <div>
-                    <span class="icon-phone"></span> {{ RAW.contact.phone }}
+                    {{{ getIcon 'phone'}}}
+                    {{ RAW.contact.phone }}
                 </div>
                 {{/has}}
 
                 {{#each r.social}}
                 <div>
-                    <span class="icon-{{{toLower label}}}"></span>
+                    {{{ getIcon (toLower label) }}}
+                    {{!-- <span class="{{{getIcon (toLower label) }}}"></span> --}}
                     {{#if url }}
                     <a href="{{{ url }}}">{{ user }}</a>
                     {{else}}

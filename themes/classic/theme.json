@@ -18,6 +18,7 @@
         "md": "basis"
     },
     "message": "This theme builds on the modern theme to use multiple columns and make the text smaller, in order to fit everything on one page.",
+    "helpers": ["helpers/*.js"],
     "fonts": {
         "all": {
             "default": ["Open Sans", "sans-serif"],
@@ -37,5 +38,12 @@
             "heading3": "Open Sans Light",
             "default": "Calibri"
         }
+    },
+    "icons": {
+        "email": "icon-envelop",
+        "website": "icon-home3",
+        "phone": "icon-phone",
+        "linkedin": "icon-linkedin2",
+        "github": "icon-github"
     }
 }

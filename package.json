@@ -41,5 +41,7 @@
     "url": "https://github.com/fresh-standard/fresh-themes/issues"
   },
   "homepage": "https://github.com/fresh-standard/fresh-themes",
-  "dependencies": { }
+  "dependencies": {
+    "printf": "^0.6.0"
+  }
 }
