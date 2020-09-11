@@ -58,14 +58,24 @@ h4 {
   padding: 10px;
 }
 
+#image {
+  display: inline-flex;
+  justify-content: center;
+}
+.avatar {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+}
+
 .left {
   width: 25%;
   color: {{{color 'background'}}};
   background-color: {{{color 'primary'}}};
 }
 .left h1, .left h2 {
-  color: {{{color 'background'}}};
   text-align: center;
+  color: {{{color 'background'}}};
 }
 .left h1.name {
   font-size: 24pt;
