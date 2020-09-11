@@ -3,17 +3,11 @@
     margin: 0;
 }
 
-* {box-sizing:border-box}
-
 html, body, main, section, header, ul, p, h1, h2, h3, h4 {
   font-size: 10pt;
   margin: 0;
   padding: 0; 
   font-family: {{{fontList 'default'}}};
-}
-
-ul {
-  padding-left: 0.5rem;
 }
 
 hr {
@@ -56,16 +50,11 @@ h4 {
   padding: 10px;
 }
 
-#image {
-  display: inline-flex;
-  justify-content: center;
-}
-.avatar {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 100%;
+.template-body {
+  margin-top: 0.75rem;
 }
 
+/* ---------------- Left Column ---------------- */
 .left {
   width: 25%;
   color: {{{color 'background'}}};
@@ -81,6 +70,17 @@ h4 {
 .left a {
   color: {{{color 'links'}}};
 }
+
+#image {
+  display: inline-flex;
+  justify-content: center;
+}
+.avatar {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100%;
+}
+
 .email, .website, .phone {
   font-size: 11pt;
 }
@@ -88,22 +88,29 @@ h4 {
   padding-right: 5px;
   color: {{{color 'background'}}};
 }
+
 #summary {
   margin-top: 0.5rem;
 }
 
+/* ---------------- Center Column ---------------- */
 .center {
   width: 50%
 }
 .center a {
   color: {{{color 'primary'}}};
 }
+.center ul {
+  padding-left: 0.5rem;
+}
 
+/* ---------------- Right Column ---------------- */
 .right {
   width: 25%;
   border-left: 2px solid {{{color 'outline'}}};
 }
 
+/* ---------------- Displaying Dates ---------------- */
 .inline {
   display: flex;
 }
@@ -112,21 +119,16 @@ h4 {
 }
 span.tenure {
   float: right;
-  font-size: 8pt;
+  font-size: 9pt;
   font-weight: bold;
   margin-top: 2px;
   color: {{{color 'text'}}};
 }
 
-.template-body {
-  margin-top: 0.75rem;
-}
-
+/* ---------------- Cards With Keywords ---------------- */
 .list-unstyled {
-  padding-left: 0;
   list-style: none;
 }
-
 .card {
   padding: 10px;
   margin-top: 10px;
@@ -134,7 +136,6 @@ span.tenure {
   border-width: 1px 0 0 0;
   background: #f7f7f7;
 }
-
 .label-keyword {
   display: inline-block;
   font-size: 8pt;
@@ -148,6 +149,7 @@ span.tenure {
   color: {{{color 'text'}}};
 }
 
+/* ---------------- Skill Bars ---------------- */
 .skill-level {
   height: 5px;
   width: 100%;
