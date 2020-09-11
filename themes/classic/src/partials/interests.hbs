@@ -2,16 +2,16 @@
 <hr>
 <section id="interests">
   {{#> header-interests }}
-    {{> header-icon _title="INTERESTS" _section="interests" }}
+  {{> header-icon _title="INTERESTS" _section="interests" }}
   {{/header-interests}}
   {{#each r.interests}}
-    {{#> body-interests }}
-    <div>
+  {{#> body-interests }}
+  <div>
     <h3><em>{{{ name }}}</em></h3>
     {{{ summary }}}
     {{> highlights }}
-    </div>
-    {{/body-interests}}
+  </div>
+  {{/body-interests}}
   {{/each}}
 </section>
 {{/section}}

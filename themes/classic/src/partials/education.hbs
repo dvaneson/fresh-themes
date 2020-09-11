@@ -7,18 +7,18 @@
   {{#> body-education }}
   <div class="template-body">
     {{#if title}}
-      <h3><b>{{{ title }}}</b></h3>
+    <h3><b>{{{ title }}}</b></h3>
     {{/if}}
 
     <div class="inline">
       <h3><em>{{{ institution }}}</em></h3>
       <span class="tenure">{{dateRange . 'MMM YYYY'}}</span>
     </div>
-    
+
     {{#if grade}}
     GPA: <b>{{{ grade }}}</b>
     {{/if}}
-    
+
     {{#if location}}<span class="location">{{location}}</span>{{/if}}
     {{{ summary }}}
     {{> highlights }}
