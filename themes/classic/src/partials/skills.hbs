@@ -3,21 +3,30 @@
   {{#> header-skills }}
   {{> header-icon _title="SKILLS" _section="skills" }}
   {{/header-skills}}
-  <table>
-    <thead>
-      <tr>
-        <th>Skill</th>
-        <th>Keywords</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each r.skills.sets}}
-      <tr>
-        <td style="width: 25%;">{{ name }}</td>
-        <td class="keywords">{{#each skills}}{{ . }} {{/each}}</td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
+
+  <ul class="list-unstyled">
+    {{#each r.skills.sets}}
+    {{#> body-skills }}
+    <li class="card card-nested card-skills">
+      <div class="skill-info">
+        <b>{{ name }}</b>
+        <div class="labels">
+          {{#if skills}}
+          {{#each skills}}
+          <div class="label-keyword">
+            {{ this }}
+          </div>
+          {{/each}}
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="skill-level">
+        <div class="skill-progress {{toLower level }}">{{ level }}</div>
+      </div>
+    </li>
+    {{/body-skills}}
+    {{/each}}
+  </ul>
 </section>
 {{/section}}
