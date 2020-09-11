@@ -71,7 +71,7 @@ h4 {
   text-decoration: none;
   padding-bottom: 1px;
   color: {{{color 'background'}}};
-  border-bottom: 2px solid {{{color 'links'}}};
+  border-bottom: 2px solid {{{color 'accent'}}};
 }
 
 #image {

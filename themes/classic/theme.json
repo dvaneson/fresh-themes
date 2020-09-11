@@ -8,8 +8,7 @@
     },
     "colors": {
         "primary": "#6497b1",
-        "accent": "#03396c",
-        "links": "#011f4b",
+        "accent": "#011f4b",
         "outline": "#b3cde0",
         "text": "#23272a",
         "background": "#ffffff"
