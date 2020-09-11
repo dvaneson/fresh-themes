@@ -29,7 +29,7 @@
                 {{#has 'contact.email'}}
                 <div class="email">
                     <span class="icon-envelop"></span>
-                    <a href="mailto:{{{ RAW.contact.email }}}">{{ RAW.contact.email }}</a>
+                    <a href="mailto:{{{ r.contact.email }}}">{{ r.contact.email }}</a>
                 </div>
                 {{/has}}
 
@@ -37,7 +37,7 @@
                 <div class="website">
                     <span class="icon-link"></span>
                     <a href="{{{ RAW.contact.website }}}">
-                        {{ RAW.contact.website }}
+                        {{ trimURL RAW.contact.website }}
                     </a>
                 </div>
                 {{/has}}
@@ -53,22 +53,23 @@
         {{> info }}
     </div>
 
+    {{#*inline "icon-writing"}}<span class="fa fa-lg fa-pencil"></span>{{/inline}}
+    {{#*inline "icon-employment"}}<span class="fa fa-lg fa-building"></span>{{/inline}}
+    {{#*inline "icon-education"}}<span class="fa fa-lg fa-mortar-board"></span>{{/inline}}
+    {{#*inline "icon-skills"}}<span class="fa fa-lg fa-code"></span>{{/inline}}
+    {{#*inline "icon-interests"}}<span class="fa fa-lg fa-bicycle"></span>{{/inline}}
+
     <div class="container center">
-        {{#*inline "icon-education"}}<span class="fa fa-lg fa-mortar-board"></span>{{/inline}}
         {{> education _icon="icon-education" }}
 
-        {{#*inline "icon-writing"}}<span class="fa fa-lg fa-pencil"></span>{{/inline}}
         {{> writing _icon="icon-writing"}}
 
-        {{#*inline "icon-employment"}}<span class="fa fa-lg fa-building"></span>{{/inline}}
         {{> employment _icon="icon-employment" }}
     </div>
 
     <div class="container right">
-        {{#*inline "icon-skills"}}<span class="fa fa-lg fa-code"></span>{{/inline}}
         {{> skills _icon="icon-skills" }}
 
-        {{#*inline "icon-interests"}}<span class="fa fa-lg fa-bicycle"></span>{{/inline}}
         {{> interests _icon="icon-interests" }}
     </div>
 </body>
