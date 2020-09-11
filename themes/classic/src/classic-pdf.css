@@ -87,7 +87,7 @@ h4 {
 #contact {
   font-size: 11pt;
 }
-[class^="icon-"] {
+#contact [class^="icon-"] {
   padding-right: 5px;
   color: {{{color 'background'}}};
 }
