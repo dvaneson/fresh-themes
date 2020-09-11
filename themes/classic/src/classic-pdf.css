@@ -135,8 +135,8 @@ span.tenure {
     border-width: 1px 0 0 0;
 }
 .card {
-    background: #FFF;
-    border-radius: 3px;
+    background: #f7f7f7;
+    border-radius: 5px;
     padding: 10px;
 }
 
@@ -154,19 +154,16 @@ span.tenure {
 }
 
 .skill-level {
+  height: 5px;
   width: 100%;
   border-radius: 20px;
   margin-top: 5px;
-  background-color: {{{color 'outline'}}};
+  background: {{{color 'outline'}}};
 }
 .skill-level .skill-progress {    
-  text-align: left;
-  font-weight: bolder;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  height: inherit;
   padding-left: 10px;
   border-radius: 20px;
-  color: white;
 }
 .skill-level .skill-progress.beginner {
   width: 50%;
@@ -182,5 +179,6 @@ span.tenure {
 }
 .skill-level .skill-progress.master {
   width: 95%;
+  color: {{{skillColor 'master'}}};
   background: {{{skillColor 'master'}}};
 }
