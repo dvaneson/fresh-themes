@@ -127,17 +127,12 @@ span.tenure {
   list-style: none;
 }
 
-.card-skills {
-    position: relative;
-}
-.card-nested {
-    margin-top: 10px;
-    border-width: 1px 0 0 0;
-}
 .card {
-    background: #f7f7f7;
-    border-radius: 5px;
-    padding: 10px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border-width: 1px 0 0 0;
+  background: #f7f7f7;
 }
 
 .label-keyword {
@@ -162,7 +157,6 @@ span.tenure {
 }
 .skill-level .skill-progress {    
   height: inherit;
-  padding-left: 10px;
   border-radius: 20px;
 }
 .skill-level .skill-progress.beginner {
@@ -170,7 +164,7 @@ span.tenure {
   background: {{{skillColor 'beginner'}}};
 }
 .skill-level .skill-progress.intermediate {
-  width: 70%;
+  width: 65%;
   background: {{{skillColor 'intermediate'}}};
 }
 .skill-level .skill-progress.advanced {
