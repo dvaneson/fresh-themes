@@ -8,7 +8,6 @@
       getIcon: function(label, options) {
         let themeObj = options.data.root.opts.themeObj
         let icons = themeObj.icons
-        console.log("icons: ", icons)
         let icon = (icons && icons[label]) || "icon-link"
         return printf('<span class="%s"></span>', icon);
       }
