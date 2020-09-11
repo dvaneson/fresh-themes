@@ -5,3 +5,4 @@ rez.json
 options.json
 resume.json
 package-lock.json
+node_modules/
