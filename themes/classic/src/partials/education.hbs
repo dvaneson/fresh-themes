@@ -5,17 +5,19 @@
   {{/header-education}}
   {{#each r.education.history}}
   {{#> body-education }}
-  <div id="education-div">
+  <div class="template-body">
+    {{#if title}}
+      <h3><b>{{{ title }}}</b></h3>
+    {{/if}}
+
     <div class="inline">
-      <h3><b>{{{ institution }}}</b></h3>
+      <h3><em>{{{ institution }}}</em></h3>
       <span class="tenure">{{dateRange . 'MMM YYYY'}}</span>
     </div>
-
-    {{#if title}}
-    <h3 style="width: 50%">
-      <em>{{{ title }}}</em>
-    </h3>
-    {{/if}} 
+    
+    {{#if grade}}
+    GPA: <b>{{{ grade }}}</b>
+    {{/if}}
     
     {{#if location}}<span class="location">{{location}}</span>{{/if}}
     {{{ summary }}}
