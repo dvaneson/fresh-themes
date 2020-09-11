@@ -27,14 +27,14 @@
         <section>
             <div id="contact">
                 {{#has 'contact.email'}}
-                <div class="email">
+                <div>
                     <span class="icon-envelop"></span>
                     <a href="mailto:{{{ r.contact.email }}}">{{ r.contact.email }}</a>
                 </div>
                 {{/has}}
 
                 {{#has 'contact.website'}}
-                <div class="website">
+                <div>
                     <span class="icon-link"></span>
                     <a href="{{{ RAW.contact.website }}}">
                         {{ trimURL RAW.contact.website }}
@@ -43,10 +43,21 @@
                 {{/has}}
 
                 {{#has 'contact.phone'}}
-                <div class="phone">
+                <div>
                     <span class="icon-phone"></span> {{ RAW.contact.phone }}
                 </div>
                 {{/has}}
+
+                {{#each r.social}}
+                <div>
+                    <span class="icon-{{{toLower label}}}"></span>
+                    {{#if url }}
+                    <a href="{{{ url }}}">{{ user }}</a>
+                    {{else}}
+                    {{ user }}
+                    {{/if}}
+                </div>
+                {{/each}}
             </div>
         </section>
 

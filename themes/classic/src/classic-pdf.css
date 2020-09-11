@@ -68,7 +68,10 @@ h4 {
   font-size: 24pt;
 }
 .left a {
-  color: {{{color 'links'}}};
+  text-decoration: none;
+  padding-bottom: 1px;
+  color: {{{color 'background'}}};
+  border-bottom: 2px solid {{{color 'links'}}};
 }
 
 #image {
@@ -81,7 +84,7 @@ h4 {
   border-radius: 100%;
 }
 
-.email, .website, .phone {
+#contact {
   font-size: 11pt;
 }
 [class^="icon-"] {
