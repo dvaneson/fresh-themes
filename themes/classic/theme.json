@@ -18,7 +18,6 @@
         "md": "basis"
     },
     "message": "This theme builds on the modern theme to use multiple columns and make the text smaller, in order to fit everything on one page.",
-    "helpers": ["helpers/*.js"],
     "fonts": {
         "all": {
             "default": ["Open Sans", "sans-serif"],
@@ -49,6 +48,9 @@
         "employment": "icon-briefcase",
         "education": "fa fa-mortar-board",
         "skills": "fa fa-code",
-        "interests": "fa icon-heart"
+        "interests": "fa icon-heart",
+        "recognition": "icon-trophy",
+        "reference": "icon-quotes-right",
+        "languages": "icon-bubbles"
     }
 }
