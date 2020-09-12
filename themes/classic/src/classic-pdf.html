@@ -28,14 +28,14 @@
             <div id="contact">
                 {{#has 'contact.email'}}
                 <div>
-                    {{{ getIcon 'email' }}}
+                    {{{ iconSpan 'email' }}}
                     <a href="mailto:{{{ r.contact.email }}}">{{ r.contact.email }}</a>
                 </div>
                 {{/has}}
 
                 {{#has 'contact.website'}}
                 <div>
-                    {{{ getIcon 'website'}}}
+                    {{{ iconSpan 'website'}}}
                     <a href="{{{ RAW.contact.website }}}">
                         {{ trimURL RAW.contact.website }}
                     </a>
@@ -44,14 +44,14 @@
 
                 {{#has 'contact.phone'}}
                 <div>
-                    {{{ getIcon 'phone'}}}
+                    {{{ iconSpan 'phone'}}}
                     {{ RAW.contact.phone }}
                 </div>
                 {{/has}}
 
                 {{#each r.social}}
                 <div>
-                    {{{ getIcon (toLower label) }}}
+                    {{{ iconSpan (toLower label) }}}
                     {{#if url }}
                     <a href="{{{ url }}}">{{ user }}</a>
                     {{else}}
@@ -65,42 +65,18 @@
         {{> info }}
     </div>
 
-    {{#*inline "icon-writing"}} {{{ getIcon 'writing' }}} {{/inline}}
-    {{#*inline "icon-employment"}} {{{ getIcon 'employment' }}} {{/inline}}
-    {{#*inline "icon-education"}} {{{ getIcon 'education' }}} {{/inline}}
-    {{#*inline "icon-skills"}} {{{ getIcon 'skills' }}} {{/inline}}
-    {{#*inline "icon-interests"}} {{{ getIcon 'interests' }}} {{/inline}}
-
     <div class="container center">
         {{#each opts.columns.center as | label | }}
-            {{> (label) r=../r opts=../opts _icon=(getIconPartial label) }}
-            {{#if @last}}
-            {{else}}
-            <hr>
-            {{/if}}
+            {{> (label) .. }}
+            {{#if @last}}   {{else}} <hr> {{/if}}
         {{/each}}
-
-        {{!-- {{> (whichPartial 'education') }} --}}
-        
-        {{!-- {{> education _icon="icon-education" }} --}}
-            
-        {{!-- {{> writing _icon="icon-writing"}} --}}
-
-        {{!-- {{> employment _icon="icon-employment" }} --}}
     </div>
 
     <div class="container right">
         {{#each opts.columns.right as | label | }}
-            {{> (label) r=../r opts=../opts _icon=(getIconPartial label) }}
-            {{#if @last}}
-            {{else}}
-            <hr>
-            {{/if}}
+            {{> (label) .. }}
+            {{#if @last}}   {{else}} <hr> {{/if}}
         {{/each}}
-
-        {{!-- {{> skills _icon="icon-skills" }}
-
-        {{> interests _icon="icon-interests" }} --}}
     </div>
 </body>
 
