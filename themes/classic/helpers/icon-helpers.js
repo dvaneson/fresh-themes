@@ -10,6 +10,10 @@
         let icons = themeObj.icons
         let icon = (icons && icons[label]) || "icon-link"
         return printf('<span class="%s"></span>', icon);
+      },
+
+      getIconPartial: function(label) {
+        return printf("icon-%s", label)
       }
     };
   

@@ -52,7 +52,6 @@
                 {{#each r.social}}
                 <div>
                     {{{ getIcon (toLower label) }}}
-                    {{!-- <span class="{{{getIcon (toLower label) }}}"></span> --}}
                     {{#if url }}
                     <a href="{{{ url }}}">{{ user }}</a>
                     {{else}}
@@ -68,22 +67,40 @@
 
     {{#*inline "icon-writing"}} {{{ getIcon 'writing' }}} {{/inline}}
     {{#*inline "icon-employment"}} {{{ getIcon 'employment' }}} {{/inline}}
-    {{#*inline "icon-education"}} {{{ getIcon 'education' }}} </span>{{/inline}}
+    {{#*inline "icon-education"}} {{{ getIcon 'education' }}} {{/inline}}
     {{#*inline "icon-skills"}} {{{ getIcon 'skills' }}} {{/inline}}
     {{#*inline "icon-interests"}} {{{ getIcon 'interests' }}} {{/inline}}
 
     <div class="container center">
-        {{> education _icon="icon-education" }}
+        {{#each opts.columns.center as | label | }}
+            {{> (label) r=../r opts=../opts _icon=(getIconPartial label) }}
+            {{#if @last}}
+            {{else}}
+            <hr>
+            {{/if}}
+        {{/each}}
 
-        {{> writing _icon="icon-writing"}}
+        {{!-- {{> (whichPartial 'education') }} --}}
+        
+        {{!-- {{> education _icon="icon-education" }} --}}
+            
+        {{!-- {{> writing _icon="icon-writing"}} --}}
 
-        {{> employment _icon="icon-employment" }}
+        {{!-- {{> employment _icon="icon-employment" }} --}}
     </div>
 
     <div class="container right">
-        {{> skills _icon="icon-skills" }}
+        {{#each opts.columns.right as | label | }}
+            {{> (label) r=../r opts=../opts _icon=(getIconPartial label) }}
+            {{#if @last}}
+            {{else}}
+            <hr>
+            {{/if}}
+        {{/each}}
 
-        {{> interests _icon="icon-interests" }}
+        {{!-- {{> skills _icon="icon-skills" }}
+
+        {{> interests _icon="icon-interests" }} --}}
     </div>
 </body>
 
