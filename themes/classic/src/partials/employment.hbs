@@ -6,18 +6,18 @@
   {{#each r.employment.history}}
   {{#> body-employment }}
   <div class="template-body">
-    <h3><b>{{ position }}</b></h3>
-
     <div class="inline">
-      <h3>
-        {{#if url }}
-        <a href="{{{ url }}}">{{ employer }}</a>
-        {{else}}
-        <em>{{ employer }}</em>
-        {{/if}}
-      </h3>
+      <h3><b>{{ position }}</b></h3>
       <span class="tenure">{{dateRange . 'MMM YYYY'}}</span>
     </div>
+
+    <h3>
+      {{#if url }}
+      <a href="{{{ url }}}">{{ employer }}</a>
+      {{else}}
+      <em>{{ employer }}</em>
+      {{/if}}
+    </h3>
 
     {{#if location}}
     <span class="location">{{location}}</span>

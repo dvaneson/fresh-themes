@@ -6,13 +6,12 @@
   {{#each r.education.history}}
   {{#> body-education }}
   <div class="template-body">
-    <h3><b>{{{ studyType }}}</b> in</h3>
-    <h3><b>{{{ area }}}</b></h3>
-
     <div class="inline">
-      <h3><em>{{{ institution }}}</em></h3>
+      <h3><b>{{{ studyType }}}</b> in <br> <b>{{{ area }}}</b></h3>
       <span class="tenure">{{dateRange . 'MMM YYYY'}}</span>
     </div>
+
+    <h3><em>{{{ institution }}}</em></h3>
 
     {{#if grade}}
     GPA: <b>{{{ grade }}}</b>

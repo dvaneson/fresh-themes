@@ -6,20 +6,20 @@
   {{#each r.writing }}
   {{#> body-writing }}
   <div class="template-body">
-    <h3><b>{{ title }}</b></h3>
-
     <div class="inline">
-      <h3>
-        <em>
-          {{#if url}}
-          <a href="{{{ url }}}">{{{ stringOrObject publisher "name"  }}}</a>
-          {{else}}
-          {{{ stringOrObject publisher "name"  }}}
-          {{/if}}
-        </em>
-      </h3>
+      <h3><b>{{ title }}</b></h3>
       <span class="tenure">{{date date "MMM DD, YYYY"}}</span>
     </div>
+
+    <h3>
+      <em>
+        {{#if url}}
+        <a href="{{{ url }}}">{{{ stringOrObject publisher "name"  }}}</a>
+        {{else}}
+        {{{ stringOrObject publisher "name"  }}}
+        {{/if}}
+      </em>
+    </h3>
 
     {{{ summary }}}
     {{> highlights }}
