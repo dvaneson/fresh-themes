@@ -1,0 +1,30 @@
+{{#section "writing"}}
+<section id="writing">
+  {{#> header-writing }}
+  {{> header-icon _title="WRITING" _section="writing" }}
+  {{/header-writing}}
+  {{#each r.writing }}
+  {{#> body-writing }}
+  <div class="template-body">
+    <h3><b>{{ title }}</b></h3>
+
+    <div class="inline">
+      <h3>
+        <em>
+          {{#if url}}
+          <a href="{{{ url }}}">{{{ stringOrObject publisher "name"  }}}</a>
+          {{else}}
+          {{{ stringOrObject publisher "name"  }}}
+          {{/if}}
+        </em>
+      </h3>
+      <span class="tenure">{{date date "MMM DD, YYYY"}}</span>
+    </div>
+
+    {{{ summary }}}
+    {{> highlights }}
+  </div>
+  {{/body-writing}}
+  {{/each}}
+</section>
+{{/section}}

@@ -1,0 +1,32 @@
+{{#section "employment"}}
+<section id="employment">
+  {{#> header-employment }}
+  {{> header-icon _title="EMPLOYMENT" _section="employment" }}
+  {{/header-employment}}
+  {{#each r.employment.history}}
+  {{#> body-employment }}
+  <div class="template-body">
+    <h3><b>{{ position }}</b></h3>
+
+    <div class="inline">
+      <h3>
+        {{#if url }}
+        <a href="{{{ url }}}">{{ employer }}</a>
+        {{else}}
+        <em>{{ employer }}</em>
+        {{/if}}
+      </h3>
+      <span class="tenure">{{dateRange . 'MMM YYYY'}}</span>
+    </div>
+
+    {{#if location}}
+    <span class="location">{{location}}</span>
+    {{/if}}
+    {{{ summary }}}
+    {{> highlights }}
+    {{#if keywords}}<span class="keywords">{{#each keywords}}{{{ . }}} {{/each}}</span>{{/if}}
+  </div>
+  {{/body-employment}}
+  {{/each}}
+</section>
+{{/section}}

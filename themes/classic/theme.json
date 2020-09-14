@@ -1,0 +1,56 @@
+{
+    "title": "classic",
+    "description": "A theme partially built from modern.",
+    "author": "dvaneson <dvaneson@gmail.com> (https://github.com/dvaneson)",
+    "engine": "handlebars",
+    "palette": {
+        "skillLevels": ["#b3cde0", "#6497b1", "#005b96", "#03396c", "#011f4b"]
+    },
+    "colors": {
+        "primary": "#6497b1",
+        "accent": "#011f4b",
+        "outline": "#b3cde0",
+        "text": "#23272a",
+        "background": "#ffffff"
+    },
+    "inherits": {
+        "txt": "basis",
+        "md": "basis"
+    },
+    "message": "This theme builds on the modern theme to use multiple columns and make the text smaller, in order to fit everything on one page.",
+    "fonts": {
+        "all": {
+            "default": ["Open Sans", "sans-serif"],
+            "heading1": [
+                "Open Sans",
+                "Helvetica Neue",
+                "Helvetica",
+                "Lato",
+                "sans-serif"
+            ],
+            "heading2": ["Helvetica Neue", "Helvetica", "Lato", "sans-serif"]
+        },
+        "doc": {
+            "title": "Open Sans Light",
+            "heading1": "Open Sans Light",
+            "heading2": "Open Sans Light",
+            "heading3": "Open Sans Light",
+            "default": "Calibri"
+        }
+    },
+    "icons": {
+        "email": "icon-envelop",
+        "website": "icon-home3",
+        "phone": "icon-phone",
+        "linkedin": "icon-linkedin2",
+        "github": "icon-github",
+        "writing": "icon-book",
+        "employment": "icon-briefcase",
+        "education": "fa fa-mortar-board",
+        "skills": "fa fa-code",
+        "interests": "fa icon-heart",
+        "recognition": "icon-trophy",
+        "reference": "icon-quotes-right",
+        "languages": "icon-bubbles"
+    }
+}

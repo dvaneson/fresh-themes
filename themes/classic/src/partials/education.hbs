@@ -1,0 +1,29 @@
+{{#section "education"}}
+<section id="education">
+  {{#> header-education }}
+  {{> header-icon _title="EDUCATION" _section="education" }}
+  {{/header-education}}
+  {{#each r.education.history}}
+  {{#> body-education }}
+  <div class="template-body">
+    <h3><b>{{{ studyType }}}</b> in</h3>
+    <h3><b>{{{ area }}}</b></h3>
+
+    <div class="inline">
+      <h3><em>{{{ institution }}}</em></h3>
+      <span class="tenure">{{dateRange . 'MMM YYYY'}}</span>
+    </div>
+
+    {{#if grade}}
+    GPA: <b>{{{ grade }}}</b>
+    {{/if}}
+
+    {{#if location}}<span class="location">{{location}}</span>{{/if}}
+    {{{ summary }}}
+    {{> highlights }}
+    {{#if curriculum}}<span class="keywords">{{#each curriculum}}{{{ . }}} {{/each}}</span>{{/if}}
+  </div>
+  {{/body-education}}
+  {{/each}}
+</section>
+{{/section}}

@@ -1,0 +1,32 @@
+{{#section "skills"}}
+<section id="skills">
+  {{#> header-skills }}
+  {{> header-icon _title="SKILLS" _section="skills" }}
+  {{/header-skills}}
+
+  <ul class="list-unstyled">
+    {{#each r.skills.sets}}
+    {{#> body-skills }}
+    <li class="card">
+      <div class="skill-info">
+        <b>{{ name }}</b>
+        <div class="labels">
+          {{#if skills}}
+          {{#each skills}}
+          <div class="label-keyword">
+            {{ this }}
+          </div>
+          {{/each}}
+          {{/if}}
+        </div>
+      </div>
+
+      <div class="skill-level">
+        <div class="skill-progress {{toLower level }}"></div>
+      </div>
+    </li>
+    {{/body-skills}}
+    {{/each}}
+  </ul>
+</section>
+{{/section}}

@@ -1,0 +1,107 @@
+@page {
+    size: Letter;
+    margin: 0;
+}
+
+html, body, main, section, header, ul, p, h1, h2, h3, h4 {
+  font-size: 10pt;
+  margin: 0;
+  padding: 0; 
+  font-family: {{{fontList 'default'}}};
+}
+
+hr {
+  border: 1px solid {{{color 'outline'}}};
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    font-family: {{{fontList 'heading1'}}};
+    color: {{{color 'text'}}};
+    background-color: {{{color 'background'}}};
+}
+
+h2 {
+    font-size: 12pt;
+    text-transform: uppercase;  
+    color: {{{color 'accent'}}};
+}
+h3 {
+    font-weight: 300;
+    font-size: 10pt;
+    color: {{{color 'primary'}}};
+}
+h4 {
+    font-size: 10pt;
+    color: {{{color 'text'}}};
+}
+
+.container {
+    width: 100%;
+    height: auto;
+}
+.container section {
+  padding: 10px;
+}
+
+.template-body {
+  margin-top: 0.75rem;
+}
+
+/* ---------------- Left Column ---------------- */
+.top {
+  color: {{{color 'background'}}};
+  background-color: {{{color 'primary'}}};
+}
+.top h1, .top h2 {
+  text-align: center;
+  color: {{{color 'background'}}};
+}
+.top h1.name {
+  font-size: 24pt;
+}
+.top a {
+  text-decoration: none;
+  padding-bottom: 1px;
+  color: {{{color 'background'}}};
+  border-bottom: 2px solid {{{color 'accent'}}};
+}
+
+#contact {
+  font-size: 11pt;
+  display: inline-flex;
+  justify-content: center;
+}
+.contact-info {
+  display: block;
+}
+.contact-info + .contact-info {
+  margin-left: 20px;
+}
+
+/* ---------------- Bottom Content ---------------- */
+.bottom a {
+  color: {{{color 'primary'}}};
+}
+.bottom ul {
+  padding-left: 0.5rem;
+}
+
+/* ---------------- Displaying Dates ---------------- */
+.inline {
+  display: flex;
+}
+.inline h3 {
+  margin-right: auto;
+}
+span.tenure {
+  float: right;
+  font-size: 9pt;
+  font-weight: bold;
+  margin-top: 2px;
+  color: {{{color 'text'}}};
+}
