@@ -11,6 +11,8 @@ html, body, main, section, header, ul, p, h1, h2, h3, h4 {
 }
 
 hr {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
   border: 1px solid {{{color 'outline'}}};
 }
 
@@ -42,23 +44,27 @@ h4 {
 
 .container {
     width: 100%;
-    height: auto;
 }
 .container section {
-  padding: 10px;
+  padding-left: 4rem;
+  padding-right: 4rem;
 }
 
 .template-body {
   margin-top: 0.75rem;
 }
 
-/* ---------------- Left Column ---------------- */
+/* ---------------- Top Content ---------------- */
 .top {
+  padding-top: 0.75rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: {{{color 'background'}}};
   background-color: {{{color 'primary'}}};
 }
 .top h1, .top h2 {
   text-align: center;
+  margin-bottom: -1rem;
   color: {{{color 'background'}}};
 }
 .top h1.name {
@@ -104,4 +110,20 @@ span.tenure {
   font-weight: bold;
   margin-top: 2px;
   color: {{{color 'text'}}};
+}
+
+
+/* ---------------- Skill Section ---------------- */
+.skill-list {
+  display: inline-block;
+  font-size: 10pt;
+}
+.comma:not(:first-child) {
+  margin-left: -.3em;  
+}
+.comma:not(:first-child):not(:last-child):before {
+  content: ", ";
+}
+.comma:last-child:before {
+  content: ", and ";
 }
