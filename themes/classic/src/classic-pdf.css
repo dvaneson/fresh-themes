@@ -57,8 +57,8 @@ h4 {
 
 /* ---------------- Top Content ---------------- */
 .top {
-  padding-top: 1rem;
-  padding-bottom: 0.75rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
   margin-bottom: 0.75rem;
   color: {{{color 'background'}}};
   background-color: {{{color 'primary'}}};
@@ -68,7 +68,7 @@ h4 {
   color: {{{color 'background'}}};
 }
 .top h1.name {
-  font-size: 24pt;
+  font-size: 20pt;
 }
 .top a {
   text-decoration: none;
@@ -87,7 +87,10 @@ h4 {
 
 /* ---------------- Bottom Content ---------------- */
 .bottom a {
+  text-decoration: none;
+  padding-bottom: 1px;
   color: {{{color 'primary'}}};
+  border-bottom: 2px solid {{{color 'accent'}}};
 }
 .bottom ul {
   padding-left: 0.5rem;

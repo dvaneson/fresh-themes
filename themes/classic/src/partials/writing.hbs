@@ -7,17 +7,19 @@
   {{#> body-writing }}
   <div class="template-body">
     <div class="inline">
-      <h3><b>{{ title }}</b></h3>
+      <h3>
+        {{#if url}}
+        <a href="{{{ url }}}"><b>{{ title }}</b></a>
+        {{else}}
+        <b>{{ title }}</b>
+        {{/if}}
+      </h3>
       <span class="tenure">{{date date "MMM DD, YYYY"}}</span>
     </div>
 
     <h3>
       <em>
-        {{#if url}}
-        <a href="{{{ url }}}">{{{ stringOrObject publisher "name"  }}}</a>
-        {{else}}
         {{{ stringOrObject publisher "name"  }}}
-        {{/if}}
       </em>
     </h3>
 
