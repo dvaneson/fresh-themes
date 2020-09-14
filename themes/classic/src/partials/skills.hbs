@@ -7,9 +7,14 @@
   <div class="template-body">
     {{#each r.skills.sets}}
     {{#> body-skills }}
-    <span class="comma">
-      {{ name }}
-    </span>
+    <div>
+      <b>{{ name }}:</b>
+      {{#each skills}}
+      <span class="comma">
+        {{ this }}
+      </span>
+      {{/each}}
+    </div>
     {{/body-skills}}
     {{/each}}
   </div>
