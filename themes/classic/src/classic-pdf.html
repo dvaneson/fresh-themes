@@ -20,32 +20,32 @@
         <section>
             <div id="contact">
                 {{#has 'contact.email'}}
-                <div class="contact-info">
+                <span class="contact-info">
                     {{{ iconSpan 'email' }}}
                     <a href="mailto:{{{ r.contact.email }}}">{{ r.contact.email }}</a>
-                </div>
+                </span>
                 {{/has}}
 
                 {{#has 'contact.website'}}
-                <div class="contact-info">
+                <span class="contact-info">
                     {{{ iconSpan 'website'}}}
                     <a href="{{{ RAW.contact.website }}}">
                         {{ trimURL RAW.contact.website }}
                     </a>
-                </div>
+                </span>
                 {{/has}} {{#has 'contact.phone'}}
-                <div class="contact-info">
+                <span class="contact-info">
                     {{{ iconSpan 'phone'}}} {{ RAW.contact.phone }}
-                </div>
+                </span>
                 {{/has}}
 
                 {{#each r.social}}
-                <div class="contact-info">
+                <span class="contact-info">
                     {{{ iconSpan (toLower label) }}}
                     {{#if url }} <a href="{{{ url }}}">{{ user }}</a>
                     {{else}} {{ user }}
                     {{/if}}
-                </div>
+                </span>
                 {{/each}}
             </div>
         </section>
