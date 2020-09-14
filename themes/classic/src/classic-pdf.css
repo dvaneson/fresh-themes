@@ -112,9 +112,6 @@ span.tenure {
 
 
 /* ---------------- Skill Section ---------------- */
-.skill-list {
-  display: inline-block;
-}
 .comma:not(:first-child) {
   margin-left: -.3em;  
 }
