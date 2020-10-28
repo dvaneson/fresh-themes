@@ -1,23 +1,26 @@
 <wx:sub-section>
-  
+
   {{#> header-skills }}
   {{> header-simple _title="SKILLS" _section="skills" }}
   {{/header-skills}}
 
   {{#each r.skills.sets}}
-    {{#> body-skills }}
-    <w:p>
-      <w:r>
-        <w:rPr>
-          <w:b/>
-          <w:b-cs/>
-        </w:rPr>
-        <w:t>{{{ name }}}: </w:t>
-      </w:r>
-      <w:r>
-        <w:t>{{#each skills }}{{ this }}{{#unless @last}}, {{/unless}}{{/each}}</w:t>
-      </w:r>
-    </w:p>
-    {{/body-skills}}
+  {{#> body-skills }}
+  <w:p>
+    <w:pPr>
+      <w:spacing w:before="50" />
+    </w:pPr>
+    <w:r>
+      <w:rPr>
+        <w:b />
+        <w:b-cs />
+      </w:rPr>
+      <w:t>{{{ name }}}: </w:t>
+    </w:r>
+    <w:r>
+      <w:t>{{#each skills }}{{#if @last}}and {{/if}}{{ this }}{{#unless @last}}, {{/unless}}{{/each}}</w:t>
+    </w:r>
+  </w:p>
+  {{/body-skills}}
   {{/each}}
 </wx:sub-section>
