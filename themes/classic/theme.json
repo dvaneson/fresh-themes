@@ -31,8 +31,8 @@
             "heading2": ["Helvetica Neue", "Helvetica", "Lato", "sans-serif"]
         },
         "doc": {
-            "title": "Open Sans Light",
-            "heading1": "Open Sans Light",
+            "title": "Open Sans",
+            "heading1": "Open Sans",
             "heading2": "Open Sans Light",
             "heading3": "Open Sans Light",
             "default": "Calibri"
