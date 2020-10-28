@@ -15,7 +15,8 @@
       <w:rPr>
         <w:rFonts w:ascii="{{{fontFace 'default' 'Calibri'}}}" w:h-ansi="{{{fontFace 'default' 'Calibri'}}}"/>
         <wx:font wx:val="{{{fontFace 'default' 'Calibri'}}}"/>
-        <w:sz-cs w:val="24"/>
+        <w:sz w:val="22"/>
+        <w:sz-cs w:val="22"/>
         <w:lang w:val="EN-US" w:fareast="EN-US" w:bidi="AR-SA"/>
         <w:color w:val="{{{color 'text'}}}" />
       </w:rPr>
@@ -28,29 +29,15 @@
       <w:name w:val="Title"/>
       <w:basedOn w:val="Normal"/>
       <w:next w:val="Normal"/>
-      <w:link w:val="TitleChar"/>
-      <w:rsid w:val="002D3B7B"/>
       <w:pPr>
         <w:contextualSpacing/>
       </w:pPr>
       <w:rPr>
         <w:b/>
         <w:spacing w:val="-10"/>
-        <w:kern w:val="28"/>
-        <w:sz w:val="48"/>
-        <w:sz-cs w:val="56"/>
+        <w:sz w:val="40"/>
+        <w:sz-cs w:val="40"/>
         <w:color w:val="{{{color 'primary'}}}" />
-      </w:rPr>
-    </w:style>
-    <w:style w:type="character" w:styleId="TitleChar">
-      <w:name w:val="Title Char"/>
-      <w:link w:val="Title"/>
-      <w:rsid w:val="002D3B7B"/>
-      <w:rPr>
-        <w:spacing w:val="-10"/>
-        <w:kern w:val="28"/>
-        <w:sz w:val="48"/>
-        <w:sz-cs w:val="56"/>
       </w:rPr>
     </w:style>
 
@@ -58,8 +45,6 @@
       <w:name w:val="heading 1"/>
       <wx:uiName wx:val="Heading 1"/>
       <w:basedOn w:val="Normal"/>
-      <w:link w:val="Heading1Char"/>
-      <w:rsid w:val="00505903"/>
       <w:pPr>
         <w:spacing w:before="100" w:before-autospacing="on"/>
         <w:pBdr>
@@ -69,23 +54,10 @@
       <w:rPr>
         <wx:font wx:val="{{{fontFace 'heading1' 'Calibri'}}}"/>
         <w:rFonts w:ascii="{{{fontFace 'heading1' 'Calibri'}}}" w:h-ansi="{{{fontFace 'heading1' 'Calibri'}}}"/>
-        <w:kern w:val="36"/>
-        <w:sz w:val="40"/>
-        <w:sz-cs w:val="40"/>
+        <w:sz w:val="32"/>
+        <w:sz-cs w:val="32"/>
         <w:caps/>
         <w:color w:val="{{{color 'accent'}}}" />
-      </w:rPr>
-    </w:style>
-    <w:style w:type="character" w:styleId="Heading1Char">
-      <w:name w:val="Heading 1 Char"/>
-      <w:link w:val="Heading1"/>
-      <w:rsid w:val="00505903"/>
-      <w:rPr>
-        <wx:font wx:val="{{{fontFace 'heading1' 'Calibri'}}}"/>
-        <w:rFonts w:ascii="{{{fontFace 'heading1' 'Calibri'}}}" w:h-ansi="{{{fontFace 'heading1' 'Calibri'}}}"/>
-        <w:kern w:val="36"/>
-        <w:sz w:val="40"/>
-        <w:sz-cs w:val="40"/>
       </w:rPr>
     </w:style>
 
@@ -93,49 +65,12 @@
       <w:name w:val="heading 2"/>
       <wx:uiName wx:val="Heading 2"/>
       <w:basedOn w:val="Normal"/>
-      <w:link w:val="Heading2Char"/>
-      <w:rsid w:val="00505903"/>
       <w:rPr>
         <wx:font wx:val="{{{fontFace 'heading2' 'Calibri'}}}"/>
         <w:rFonts w:ascii="{{{fontFace 'heading2' 'Calibri'}}}" w:h-ansi="{{{fontFace 'heading2' 'Calibri'}}}"/>
-        <w:sz-cs w:val="28"/>
-        <w:sz w:val="28"/>
+        <w:sz-cs w:val="24"/>
+        <w:sz w:val="24"/>
         <w:color w:val="{{{color 'primary'}}}" />
-      </w:rPr>
-    </w:style>
-    <w:style w:type="character" w:styleId="Heading2Char">
-      <w:name w:val="Heading 2 Char"/>
-      <w:link w:val="Heading2"/>
-      <w:rsid w:val="00505903"/>
-      <w:rPr>
-        <wx:font wx:val="{{{fontFace 'heading2' 'Calibri'}}}"/>
-        <w:rFonts w:ascii="{{{fontFace 'heading2' 'Calibri'}}}" w:h-ansi="{{{fontFace 'heading2' 'Calibri'}}}"/>
-        <w:sz-cs w:val="28"/>
-        <w:sz w:val="28"/>
-      </w:rPr>
-    </w:style>
-
-    <w:style w:type="paragraph" w:styleId="Heading3">
-      <w:name w:val="heading 3"/>
-      <wx:uiName wx:val="Heading 3"/>
-      <w:basedOn w:val="Normal"/>
-      <w:link w:val="Heading3Char"/>
-      <w:rsid w:val="001B7422"/>
-      <w:rPr>
-        <wx:font wx:val="{{{fontFace 'heading3' 'Calibri'}}}"/>
-        <w:i/>
-        <w:i-cs/>
-        <w:color w:val="{{{color 'primary'}}}"/>
-      </w:rPr>
-    </w:style>
-    <w:style w:type="character" w:styleId="Heading3Char">
-      <w:name w:val="Heading 3 Char"/>
-      <w:link w:val="Heading3"/>
-      <w:rsid w:val="001B7422"/>
-      <w:rPr>
-        <w:rFonts w:ascii="{{{fontFace 'heading3' 'Calibri'}}}" w:h-ansi="{{{fontFace 'heading3' 'Calibri'}}}"/>
-        <w:sz w:val="28"/>
-        <w:sz-cs w:val="28"/>
       </w:rPr>
     </w:style>
     
@@ -144,10 +79,8 @@
       <w:rsid w:val="004E2103"/>
       <w:rPr>
         <w:rFonts w:ascii="Calibri" w:h-ansi="Calibri"/>
-        <w:b w:val="off"/>
+        <w:b/>
         <w:b-cs/>
-        <w:sz w:val="28"/>
-        <w:sz-cs w:val="28"/>
         <w:color w:val="{{{color 'text'}}}" />
       </w:rPr>
     </w:style>
