@@ -21,7 +21,7 @@
         <w:color w:val="{{{color 'text'}}}" />
       </w:rPr>
       <w:pPr>
-        <w:jc w:val="both"/>
+        <w:jc w:val="left"/>
       </w:pPr>
     </w:style>
 
@@ -33,6 +33,8 @@
         <w:contextualSpacing/>
       </w:pPr>
       <w:rPr>
+        <w:rFonts w:ascii="{{{fontFace 'title' 'Calibri'}}}" w:h-ansi="{{{fontFace 'title' 'Calibri'}}}"/>
+        <wx:font wx:val="{{{fontFace 'title' 'Calibri'}}}"/>
         <w:b/>
         <w:spacing w:val="-10"/>
         <w:sz w:val="40"/>
@@ -54,9 +56,11 @@
       <w:rPr>
         <wx:font wx:val="{{{fontFace 'heading1' 'Calibri'}}}"/>
         <w:rFonts w:ascii="{{{fontFace 'heading1' 'Calibri'}}}" w:h-ansi="{{{fontFace 'heading1' 'Calibri'}}}"/>
-        <w:sz w:val="32"/>
-        <w:sz-cs w:val="32"/>
+        <w:sz w:val="28"/>
+        <w:sz-cs w:val="28"/>
         <w:caps/>
+        <w:b/>
+        <w:b-cs/>
         <w:color w:val="{{{color 'accent'}}}" />
       </w:rPr>
     </w:style>
@@ -87,7 +91,6 @@
 
     <w:style w:type="character" w:styleId="Hyperlink">
       <w:name w:val="Hyperlink"/>
-      <w:rsid w:val="001B7422"/>
       <w:rPr>
         <w:strike w:val="off"/>
         <w:dstrike w:val="off"/>
@@ -111,7 +114,6 @@
     <w:style w:type="paragraph" w:styleId="ListParagraph">
       <w:name w:val="List Paragraph"/>
       <w:basedOn w:val="Normal"/>
-      <w:rsid w:val="00C146CA"/>
       <w:pPr>
         <w:ind w:left="720"/>
         <w:contextualSpacing/>
