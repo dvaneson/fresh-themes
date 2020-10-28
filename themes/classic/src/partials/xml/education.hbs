@@ -8,29 +8,31 @@
   <wx:sub-section>
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Heading2"/>
+        <w:pStyle w:val="Heading2" />
       </w:pPr>
       <w:r>
         <w:rPr>
-          <w:b/>
-          <w:b-cs/>
+          <w:b />
+          <w:b-cs />
         </w:rPr>
         <w:t>{{ studyType }}</w:t>
       </w:r>
-      <w:r><w:t> in </w:t></w:r>
+      <w:r>
+        <w:t> in </w:t>
+      </w:r>
       <w:r>
         <w:rPr>
-          <w:b/>
-          <w:b-cs/>
+          <w:b />
+          <w:b-cs />
         </w:rPr>
         <w:t>{{ area }}</w:t>
       </w:r>
       <w:r>
-        <w:tab/>
+        <w:tab />
       </w:r>
       <w:r>
         <w:rPr>
-          <w:rStyle w:val="FromTo"/>
+          <w:rStyle w:val="FromTo" />
         </w:rPr>
         <w:t>{{dateRange . 'MMM YYYY'}}</w:t>
       </w:r>
@@ -38,15 +40,15 @@
 
     <w:p>
       <w:pPr>
-        <w:pStyle w:val="Heading2"/>
+        <w:pStyle w:val="Heading2" />
         <w:tabs>
-          <w:tab w:val="right" w:pos="9360"/>
+          <w:tab w:val="right" w:pos="9360" />
         </w:tabs>
       </w:pPr>
       <w:r>
         <w:rPr>
-          <w:i/>
-          <w:i-cs/>
+          <w:i />
+          <w:i-cs />
         </w:rPr>
         <w:t>{{ institution }}</w:t>
       </w:r>
@@ -56,33 +58,29 @@
     <w:p>
       <w:r>
         <w:rPr>
-          <w:b/>
-          <w:b-cs/>
+          <w:b />
+          <w:b-cs />
         </w:rPr>
         <w:t>GPA: </w:t>
       </w:r>
-      <w:r><w:t>{{{ grade }}}</w:t></w:r>
+      <w:r>
+        <w:t>{{{ grade }}}</w:t>
+      </w:r>
     </w:p>
     {{/if}}
 
     {{#each highlights}}
-    <w:p wsp:rsidR="00C146CA" wsp:rsidRDefault="009452CA" wsp:rsidP="00C146CA">
+    <w:p>
       <w:pPr>
-        <w:pStyle w:val="ListParagraph"/>
+        <w:pStyle w:val="ListParagraph" />
         <w:listPr>
-          <w:ilvl w:val="0"/>
-          <w:ilfo w:val="1"/>
-          <wx:t wx:val="•"/>
-          <wx:font wx:val="Calibri"/>
+          <w:ilvl w:val="0" />
+          <w:ilfo w:val="1" />
+          <wx:t wx:val="•" />
+          <wx:font wx:val="Calibri" />
         </w:listPr>
-        <w:rPr>
-          <w:sz-cs w:val="20"/>
-        </w:rPr>
       </w:pPr>
       <w:r>
-        <w:rPr>
-          <w:sz-cs w:val="20"/>
-        </w:rPr>
         <w:t>{{ this }}</w:t>
       </w:r>
     </w:p>
