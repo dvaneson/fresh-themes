@@ -36,7 +36,6 @@
         <w:rFonts w:ascii="{{{fontFace 'title' 'Calibri'}}}" w:h-ansi="{{{fontFace 'title' 'Calibri'}}}"/>
         <wx:font wx:val="{{{fontFace 'title' 'Calibri'}}}"/>
         <w:b/>
-        <w:spacing w:val="-10"/>
         <w:sz w:val="40"/>
         <w:sz-cs w:val="40"/>
         <w:color w:val="{{{color 'accent'}}}" />
@@ -50,7 +49,7 @@
       <w:pPr>
         <w:spacing w:before="100" w:before-autospacing="on"/>
         <w:pBdr>
-          <w:top w:val="single" w:sz="6" w:space="1" w:color="#EEEEEE" />
+          <w:top w:val="single" w:sz="6" w:space="1" w:color="{{{ color 'outline' }}}" />
         </w:pBdr>
       </w:pPr>
       <w:rPr>
@@ -115,6 +114,7 @@
       <w:basedOn w:val="Normal"/>
       <w:pPr>
         <w:ind w:left="720"/>
+        <w:spacing w:after="50"/>
         <w:contextualSpacing/>
       </w:pPr>
     </w:style>
