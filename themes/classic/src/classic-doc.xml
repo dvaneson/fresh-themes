@@ -39,7 +39,7 @@
         <w:spacing w:val="-10"/>
         <w:sz w:val="40"/>
         <w:sz-cs w:val="40"/>
-        <w:color w:val="{{{color 'primary'}}}" />
+        <w:color w:val="{{{color 'accent'}}}" />
       </w:rPr>
     </w:style>
 
@@ -80,7 +80,6 @@
     
     <w:style w:type="character" w:styleId="FromTo">
       <w:name w:val="FromTo"/>
-      <w:rsid w:val="004E2103"/>
       <w:rPr>
         <w:rFonts w:ascii="Calibri" w:h-ansi="Calibri"/>
         <w:b/>
@@ -140,15 +139,12 @@
 
       {{!<!-- Contact Information -->}}
       {{#if r.contact }}
-      <w:p wsp:rsidR="00C146CA" wsp:rsidRDefault="00505903" wsp:rsidP="00C146CA">
+      <w:p>
         <w:pPr>
-          <w:rPr>
-            <w:sz-cs w:val="20"/>
-          </w:rPr>
           <w:jc w:val="center"/>
         </w:pPr>
         <w:hlink w:dest="mailto:{{ r.contact.email }}">
-          <w:r wsp:rsidRPr="003876BF">
+          <w:r>
             <w:rPr>
               <w:rStyle w:val="Hyperlink"/>
             </w:rPr>
@@ -156,22 +152,42 @@
           </w:r>
         </w:hlink>
         <w:r>
-          <w:t> - </w:t>
+          <w:t> • </w:t>
         </w:r>
-        <w:r wsp:rsidR="00C146CA" wsp:rsidRPr="000A3AF0">
+        <w:r>
           <w:t>{{ r.contact.phone }}</w:t>
         </w:r>
         <w:r>
-          <w:t> - </w:t>
+          <w:t> • </w:t>
         </w:r>
         <w:hlink w:dest="{{ r.contact.website }}">
-          <w:r wsp:rsidRPr="003876BF">
+          <w:r>
             <w:rPr>
               <w:rStyle w:val="Hyperlink"/>
             </w:rPr>
             <w:t>{{ r.contact.website }}</w:t>
           </w:r>
         </w:hlink>
+
+        {{#each r.social}}
+          <w:r>
+            <w:t> • </w:t>
+          </w:r>
+          {{#if url}} 
+          <w:hlink w:dest="{{{ url }}}">
+            <w:r>
+              <w:rPr>
+                <w:rStyle w:val="Hyperlink"/>
+              </w:rPr>
+              <w:t>{{{ label }}}</w:t>
+            </w:r>
+          </w:hlink>
+          {{else}} 
+          <w:r>
+            <w:t>{{{ label }}}</w:t>
+          </w:r>
+          {{/if}}
+        {{/each}}
       </w:p>
       {{/if}}
 
