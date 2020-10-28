@@ -191,7 +191,7 @@
       {{/if}}
 
       {{#each opts.columns.center as | label | }}
-        {{> (label) .. }}
+        {{> (getDocPartial label) .. }}
       {{/each}}
 
       <w:sectPr wsp:rsidR="00B43FDC" wsp:rsidRPr="000A3AF0" wsp:rsidSect="001B7422">

@@ -52,5 +52,6 @@
         "recognition": "icon-trophy",
         "reference": "icon-quotes-right",
         "languages": "icon-bubbles"
-    }
+    },
+    "helpers": ["helpers/*.js"]
 }

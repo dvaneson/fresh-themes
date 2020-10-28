@@ -53,7 +53,7 @@
 
     <div class="container bottom">
         {{#each opts.columns.center as | label | }}
-        {{> (label) .. }}
+        {{> (getPdfPartial label) .. }}
         {{#if @last}} {{else}}
         <hr />
         {{/if}}
