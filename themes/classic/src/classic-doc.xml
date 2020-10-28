@@ -98,8 +98,6 @@
       <w:rPr>
         <wx:font wx:val="{{{fontFace 'heading2' 'Calibri'}}}"/>
         <w:rFonts w:ascii="{{{fontFace 'heading2' 'Calibri'}}}" w:h-ansi="{{{fontFace 'heading2' 'Calibri'}}}"/>
-        <w:b/>
-        <w:b-cs/>
         <w:sz-cs w:val="28"/>
         <w:sz w:val="28"/>
         <w:color w:val="{{{color 'primary'}}}" />
@@ -112,8 +110,6 @@
       <w:rPr>
         <wx:font wx:val="{{{fontFace 'heading2' 'Calibri'}}}"/>
         <w:rFonts w:ascii="{{{fontFace 'heading2' 'Calibri'}}}" w:h-ansi="{{{fontFace 'heading2' 'Calibri'}}}"/>
-        <w:b/>
-        <w:b-cs/>
         <w:sz-cs w:val="28"/>
         <w:sz w:val="28"/>
       </w:rPr>
