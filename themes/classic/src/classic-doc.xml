@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Word.Document"?>
+<w:wordDocument xmlns:aml="http://schemas.microsoft.com/aml/2001/core" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w="http://schemas.microsoft.com/office/word/2003/wordml" xmlns:wx="http://schemas.microsoft.com/office/word/2003/auxHint" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wsp="http://schemas.microsoft.com/office/word/2003/wordml/sp2" xmlns:sl="http://schemas.microsoft.com/schemaLibrary/2003/core" w:macrosPresent="no" w:embeddedObjPresent="no" w:ocxPresent="no" xml:space="preserve">
+  <w:ignoreSubtree w:val="http://schemas.microsoft.com/office/word/2003/wordml/sp2"/>
+  
+  {{> doc-properties }}
+  {{> doc-fonts }}
+  {{> doc-lists }}
+
+
+  <w:styles>
+    <w:style w:type="paragraph" w:default="on" w:styleId="Normal">
+      <w:name w:val="Normal"/>
+      <w:rsid w:val="002743C8"/>
+      <w:rPr>
+        <w:rFonts w:ascii="{{{fontFace 'default' 'Calibri'}}}" w:h-ansi="{{{fontFace 'default' 'Calibri'}}}"/>
+        <wx:font wx:val="{{{fontFace 'default' 'Calibri'}}}"/>
+        <w:sz-cs w:val="24"/>
+        <w:lang w:val="EN-US" w:fareast="EN-US" w:bidi="AR-SA"/>
+      </w:rPr>
+      <w:pPr>
+        <w:jc w:val="both"/>
+      </w:pPr>
+    </w:style>
+
+    <w:style w:type="paragraph" w:styleId="Title">
+      <w:name w:val="Title"/>
+      <w:basedOn w:val="Normal"/>
+      <w:next w:val="Normal"/>
+      <w:link w:val="TitleChar"/>
+      <w:rsid w:val="002D3B7B"/>
+      <w:pPr>
+        <w:contextualSpacing/>
+      </w:pPr>
+      <w:rPr>
+        <w:rFonts w:ascii="Segoe UI" w:h-ansi="Segoe UI"/>
+        <wx:font wx:val="Segoe UI"/>
+        <w:b/>
+        <w:spacing w:val="-10"/>
+        <w:kern w:val="28"/>
+        <w:sz w:val="48"/>
+        <w:sz-cs w:val="56"/>
+        <w:color w:val="{{{color 'primary'}}}" />
+      </w:rPr>
+    </w:style>
+
+    <w:style w:type="character" w:styleId="Hyperlink">
+      <w:name w:val="Hyperlink"/>
+      <w:rsid w:val="001B7422"/>
+      <w:rPr>
+        <w:strike w:val="off"/>
+        <w:dstrike w:val="off"/>
+        <w:color w:val="2F5496"/>
+        <w:u w:val="none"/>
+        <w:effect w:val="none"/>
+      </w:rPr>
+    </w:style>
+  </w:styles>
+
+
+  {{> doc-pr }}
+
+  <w:body>
+    <wx:sect>
+
+      {{!<!-- Name -->}}
+      <w:p wsp:rsidR="00C146CA" wsp:rsidRPr="00C146CA" wsp:rsidRDefault="007D096C" wsp:rsidP="00C146CA">
+        <w:pPr>
+          <w:pStyle w:val="Title"/>
+          <w:jc w:val="center"/>
+        </w:pPr>
+        <w:r>
+          <w:t>{{{ r.name }}}</w:t>
+        </w:r>
+      </w:p>
+
+      {{!<!-- Contact Information -->}}
+      {{#if r.contact }}
+      <w:p wsp:rsidR="00C146CA" wsp:rsidRDefault="00505903" wsp:rsidP="00C146CA">
+        <w:pPr>
+          <w:rPr>
+            <w:sz-cs w:val="20"/>
+          </w:rPr>
+          <w:jc w:val="center"/>
+        </w:pPr>
+        <w:hlink w:dest="mailto:{{ r.contact.email }}">
+          <w:r wsp:rsidRPr="003876BF">
+            <w:rPr>
+              <w:rStyle w:val="Hyperlink"/>
+            </w:rPr>
+            <w:t>{{ r.contact.email }}</w:t>
+          </w:r>
+        </w:hlink>
+        <w:r>
+          <w:t> - </w:t>
+        </w:r>
+        <w:r wsp:rsidR="00C146CA" wsp:rsidRPr="000A3AF0">
+          <w:t>{{ r.contact.phone }}</w:t>
+        </w:r>
+        <w:r>
+          <w:t> - </w:t>
+        </w:r>
+        <w:hlink w:dest="{{ r.contact.website }}">
+          <w:r wsp:rsidRPr="003876BF">
+            <w:rPr>
+              <w:rStyle w:val="Hyperlink"/>
+            </w:rPr>
+            <w:t>{{ r.contact.website }}</w:t>
+          </w:r>
+        </w:hlink>
+      </w:p>
+      {{/if}}
+
+      {{#has "info.brief"}}
+      <w:p wsp:rsidR="00C146CA" wsp:rsidRPr="000A3AF0" wsp:rsidRDefault="00C146CA" wsp:rsidP="00A210E1">
+        <w:pPr>
+          <w:pStyle w:val="Summary"/>
+        </w:pPr>
+        {{{wpml r.info.brief true }}}
+      </w:p>
+      {{/has}}
+      {{#section "skills"}}{{> skills }}{{/section}}
+
+      {{#*inline "header-employment"}}
+      {{> header-simple _title="EMPLOYMENT" _section="employment" _icon="pict/emp" }}
+      {{/inline}}
+      {{#section "employment"}}{{> section/employment }}{{/section}}
+
+      {{#*inline "header-projects"}}
+      {{> header-simple _title="PROJECTS" _section="projects" _icon="pict/star" }}
+      {{/inline}}
+      {{#section "projects"}}{{> section/projects }}{{/section}}
+
+      {{#*inline "header-governance"}}
+      {{> header-simple _title="GOVERNANCE" _section="governance" _icon="pict/justice-scales" }}
+      {{/inline}}
+      {{#section "governance"}}{{> section/governance }}{{/section}}
+
+      {{#*inline "header-affiliation"}}
+      {{> header-simple _title="AFFILIATION" _section="affiliation" _icon="pict/share-alt" }}
+      {{/inline}}
+      {{#section "affiliation"}}{{> section/affiliation }}{{/section}}
+
+      {{#*inline "header-education"}}
+      {{> header-simple _title="EDUCATION" _section="education" _icon="pict/edu" }}
+      {{/inline}}
+      {{#section "education"}}{{> section/education }}{{/section}}
+
+      {{#*inline "header-service"}}
+      {{> header-simple _title="SERVICE" _section="service" _icon="pict/srv" }}
+      {{/inline}}
+      {{#section "service"}}{{> section/service }}{{/section}}
+
+      {{#*inline "header-extracurricular"}}
+      {{> header-simple _title="EXTRACURRICULAR" _section="extracurricular" _icon="pict/srv" }}
+      {{/inline}}
+      {{#section "extracurricular"}}{{> section/extracurricular }}{{/section}}
+
+      {{#*inline "header-writing"}}
+      {{> header-simple _title="WRITING" _section="writing" _icon="pict/wri" }}
+      {{/inline}}
+      {{#section "writing"}}{{> section/writing }}{{/section}}
+
+      {{#*inline "header-reading"}}
+      {{> header-simple _title="READING" _section="reading" _icon="pict/book" }}
+      {{/inline}}
+      {{#section "reading"}}{{> section/reading }}{{/section}}
+
+      {{#*inline "header-recognition"}}
+      {{> header-simple _title="RECOGNITION" _section="recognition" _icon="pict/rec" }}
+      {{/inline}}
+      {{#section "recognition"}}{{> section/recognition }}{{/section}}
+
+      {{#*inline "header-speaking"}}
+      {{> header-simple _title="SPEAKING" _section="speaking" _icon="pict/group" }}
+      {{/inline}}
+      {{#section "speaking"}}{{> section/speaking }}{{/section}}
+
+      {{#*inline "header-references"}}
+      {{> header-simple _title="REFERENCES" _section="references" _icon="pict/thumbs-up" }}
+      {{/inline}}
+      {{#section "references"}}{{> section/references }}{{/section}}
+
+      {{#*inline "header-interests"}}
+      {{> header-simple _title="INTERESTS" _section="interests" _icon="pict/bicycle" }}
+      {{/inline}}
+      {{#section "interests"}}{{> section/interests }}{{/section}}
+
+      <w:sectPr wsp:rsidR="00B43FDC" wsp:rsidRPr="000A3AF0" wsp:rsidSect="001B7422">
+        <w:pgSz w:w="12240" w:h="15840"/>
+        <w:pgMar w:top="1440" w:right="1440" w:bottom="1440" w:left="1440" w:header="720" w:footer="720" w:gutter="0"/>
+        <w:cols w:space="720"/>
+        <w:docGrid w:line-pitch="360"/>
+      </w:sectPr>
+    </wx:sect>
+  </w:body>
+</w:wordDocument>

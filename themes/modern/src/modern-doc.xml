@@ -342,8 +342,8 @@
         concept of a paragraph, not quite the same as a normal paragraph, but
         close enough. We'll use <w:p> and adorn with a <w:pPr> (paragraph
         properties) that sets the style of this paragraph to "Title". We don't
-        have to do it this way -- we can insert arbitrary styled content here
-        -- but in practice this is how many Word docs are set up.
+        have to do it this way - we can insert arbitrary styled content here
+        - but in practice this is how many Word docs are set up.
       -->}}
 
       <w:p wsp:rsidR="00C146CA" wsp:rsidRPr="00C146CA" wsp:rsidRDefault="007D096C" wsp:rsidP="00C146CA">
